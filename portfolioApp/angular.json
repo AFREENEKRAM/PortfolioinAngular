@@ -13,6 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "lodash"
+           ], 
             "outputPath": "dist/portfolioApp",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -26,13 +29,16 @@
             "styles": [
               "node_modules/devextreme/dist/css/dx.common.css",
               "node_modules/devextreme/dist/css/dx.light.css",
+              
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/customStyle.scss"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
-          },
+          }, 
           "configurations": {
             "production": {
               "fileReplacements": [

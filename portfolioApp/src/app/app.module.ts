@@ -5,7 +5,10 @@ import { AppComponent } from './app.component';
 import { OutletCompoComponent } from './outlet-compo/outlet-compo.component';
 import { HeaderCompoComponent } from './header-compo/header-compo.component';
 import { FooterCompoComponent } from './footer-compo/footer-compo.component';
-import { WelcomeCompoComponent } from './welcome-compo/welcome-compo.component';
+import { CustomizeModuleModule } from './CustomizeModule/customize-module.module'
+import { DevExtremeModule } from './AngularModules/dev-extreme/dev-extreme.module';
+
+
 
 @NgModule({
   declarations: [
@@ -13,10 +16,16 @@ import { WelcomeCompoComponent } from './welcome-compo/welcome-compo.component';
     OutletCompoComponent,
     HeaderCompoComponent,
     FooterCompoComponent,
-    WelcomeCompoComponent
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CustomizeModuleModule,
+    
+    /**** DevEx ******/
+  
+    DevExtremeModule 
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

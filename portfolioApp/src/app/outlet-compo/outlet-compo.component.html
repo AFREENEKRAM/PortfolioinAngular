@@ -1,1 +1,35 @@
-<p>outlet-compo works!</p>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container-fluid">
+<app-header-compo></app-header-compo>
+
+<div class="row justify-content-start" >
+    <!-- <dx-toolbar
+    [items]="toolbarContent">
+</dx-toolbar> -->
+
+ <dx-drawer
+
+    [openedStateMode]="'shrink'"
+    template="template"
+    [opened]="true"
+
+    [closeOnOutsideClick]="false">
+
+    <div *dxTemplate="let data of 'template'">
+        <div class="menuHeading" >'settingsMenu'</div>
+
+            <app-menu></app-menu>
+
+
+        </div>
+  
+
+        <div  id="content" class= "contentOutlet">
+              abc
+           </div>
+    </dx-drawer>
+
+
+</div>
+
+</div>

@@ -1,0 +1,16 @@
+<div>
+	<!-- <div class="menuheader">{{corrLocalize('settingsMenu')}}</div> -->
+	<dx-tree-view
+		id="mymenu"
+		[items]="menu"
+		
+		scrollDirection = "vertical"
+		activeStateEnabled = true
+		showScrollbar= 'always'						
+		>
+
+		<div *dxTemplate="let data of 'item'">
+			{{data.text}}
+		</div>
+	</dx-tree-view> 
+</div>
